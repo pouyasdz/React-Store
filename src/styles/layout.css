@@ -1,0 +1,11 @@
+.content{
+    height: 96vh;
+    max-height: 96vh;
+    
+}
+@media (max-width: 768px){
+    .content{
+        height: 94vh;
+        max-height: 94vh;
+    }
+}
