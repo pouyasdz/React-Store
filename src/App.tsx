@@ -9,22 +9,25 @@ import Cart from "./page/cart";
 function App() {
   return (
     <Router>
+        <Container>
       <Routes>
-        <Route path="/" element={ <Container children={<Home/>}/> }/>
+        <Route path="/" element={ <Home/>}/>
         
         <Route path="category">
-          <Route path="all" element={ <Container children={<CategoryOverview/>}/> }/>
-          <Route path=":id" element={ <Container children={<CategoryProducts/>}/> }/>
+          <Route path="all" element={ <CategoryOverview/>}/>
+          <Route path=":id" element={ <CategoryProducts/>}/>
         </Route>
 
         <Route path="product">
-          <Route path=":id" element={ <Container children={<Product/>}/> }/>
+          <Route path=":id" element={ <Product/>}/>
         </Route>
 
         <Route path="cart">
-          <Route path=":id" element={ <Container children={<Cart/>}/> }/>
+          <Route path=":id" element={ <Cart/>}/>
         </Route>
+
       </Routes>
+        </Container>
     </Router>
   );
 }

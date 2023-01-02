@@ -10,8 +10,9 @@ class LanguageReducer{
     langReducer(state = initialState,props:Reducer){ 
         switch (props.type) {
             case ActionTypes.SET_LANGUAGE:
-                const selectedLang = props.payload === "eng" ? eng:fa                
-                return {...state, lang:selectedLang}
+                const selectedLang = props.payload === "eng" ? eng:fa
+                const diraction = props.payload === "eng" ? "ltr":"rtl"                
+                return {...state, lang:{...selectedLang,lang:props.payload, diraction}}
             default:
                 return state
         }

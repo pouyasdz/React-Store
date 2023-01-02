@@ -3,7 +3,7 @@ import children from "./common/children"
 
 interface navItem{
     href:string,
-    isActive?:boolean
+    isActive?:true | false
 }
 
 type nav = navItem & children;
