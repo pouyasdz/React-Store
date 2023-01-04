@@ -7,3 +7,5 @@ export const initialLang = {
       home: "",
     },
   };
+
+export const brandName  = "بلوط"

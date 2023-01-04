@@ -1,0 +1,18 @@
+/* eslint-disable @typescript-eslint/consistent-type-assertions */
+import React from "react";
+import theme from "../theme";
+
+type CssStyle = React.CSSProperties;
+
+export const mainHeader = {
+  search: <CssStyle>{
+    display: "flex",
+    width: "max-content",
+    gap: "12px",
+  },
+  iconButtonBox: <CssStyle>{
+    marginRight: "auto",
+    display: "flex",
+    gap: "5px",
+  },
+};

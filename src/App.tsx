@@ -1,15 +1,22 @@
-import Container from "./container";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Home from "./page/home";
 import Product from "./page/product";
 import CategoryOverview from "./page/category/CategoryOverview";
 import CategoryProducts from "./page/category/CategoryProducts";
 import Cart from "./page/cart";
+import Content from "./container";
+import {CssBaseline, ThemeProvider} from "@mui/material"
+import theme from "./theme";
+
+
 
 function App() {
+
   return (
     <Router>
-        <Container>
+      <ThemeProvider theme={theme}>
+      <CssBaseline/>
+        <Content>
       <Routes>
         <Route path="/" element={ <Home/>}/>
         
@@ -27,7 +34,8 @@ function App() {
         </Route>
 
       </Routes>
-        </Container>
+        </Content>
+        </ThemeProvider> 
     </Router>
   );
 }

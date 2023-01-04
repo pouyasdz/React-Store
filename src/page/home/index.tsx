@@ -1,8 +1,11 @@
+import { Button } from '@mui/material'
 import React from 'react'
 
 function Home() {
   return (
-    <div>Home</div>
+    <div>
+      <Button color='secondary'>Home</Button>
+    </div>
   )
 }
 

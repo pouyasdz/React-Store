@@ -1,38 +1,34 @@
 import React, {useEffect, useState} from 'react'
-import Footer from '../components/common/Footer';
 import children from '../Types/common/children'
-import "../styles/layout.css"
 import { useDispatch, useSelector} from 'react-redux';
-import languageAction from '../redux/actions/languageAction';
-import Nav from '../components/common/navbar';
 import { getLanguagePakage, setLanguagePakage } from '../utils/functions';
 import { initialLang } from '../constant';
+import {Box, Container, useTheme} from "@mui/material"
+import Header from '../components/common/header';
 
 
-function Container(props:children) {
-  const language = "eng"
+
+function Content(props:children) {
+  const theme = useTheme();
   const dispatch = useDispatch();
-  const action = languageAction.Actions;
   const [state, setState] = useState(initialLang)
   const languagePakage = getLanguagePakage(useSelector);
   useEffect(() => {
     setLanguagePakage("fa", dispatch);
-    setState(languagePakage.lang)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   useEffect(() => {
     setState(languagePakage.lang)
   }, [languagePakage])
   
   return (
-    <div className='container mx-auto block' style={{height:"100vh", maxHeight:"100vh", overflow:"hidden"}} dir={state?.diraction}>
-        
-        <Nav/>
-        <div className="container bg-slate-300 overflow-auto content" dir={state?.diraction}>
+    <Container dir={state?.diraction} sx={{backgroundColor:theme.palette.grey[500], height:"100vh", paddingTop:"100px"}}>
+        <Header/>
+        <Box dir={state?.diraction} sx={{width:"100%", height:"50vh", backgroundColor:"wheat"}}>
           {props.children}
-        <Footer/>
-        </div>
-    </div>
+        </Box>
+    </Container>
   )
 }
 
-export default Container;
+export default Content;
