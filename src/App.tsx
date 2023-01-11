@@ -7,8 +7,7 @@ import Cart from "./page/cart";
 import Content from "./container";
 import {CssBaseline, ThemeProvider} from "@mui/material"
 import theme from "./theme";
-
-
+import { Routing } from "./constant";
 
 function App() {
 
@@ -20,18 +19,18 @@ function App() {
       <Routes>
         <Route path="/" element={ <Home/>}/>
         
-        <Route path="category">
-          <Route path="all" element={ <CategoryOverview/>}/>
-          <Route path=":id" element={ <CategoryProducts/>}/>
-        </Route>
+       
+          <Route path={Routing.category.all} element={ <CategoryOverview/>}/>
+          <Route path={Routing.category.singlePageCagegory} element={ <CategoryProducts/>}/>
+        
 
-        <Route path="product">
-          <Route path=":id" element={ <Product/>}/>
-        </Route>
+      
+          <Route path={Routing.product.singlePageProduct} element={ <Product/>}/>
+        
 
-        <Route path="cart">
-          <Route path=":id" element={ <Cart/>}/>
-        </Route>
+        
+          <Route path={Routing.cart} element={ <Cart/>}/>
+        
 
       </Routes>
         </Content>
