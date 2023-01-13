@@ -12,7 +12,7 @@ function Content(props:children) {
     <Box>
     <Container maxWidth={"xl"} dir={"rtl"} sx={{backgroundColor:theme.palette.grey[100], height:"100vh", overflow:"auto"}}>
         <Header/>
-        <Box dir={"rtl"} sx={{width:"100%", height:"50vh", backgroundColor:theme.palette.grey[200],marginTop:"10rem", [theme.breakpoints.down("sm")]:{marginTop:"5rem"}}}>
+        <Box dir={"rtl"} sx={{width:"100%", height:"50vh", backgroundColor:theme.palette.grey[200],marginTop:"10rem", [theme.breakpoints.down("sm")]:{marginTop:"8rem"}}}>
           {props.children}
         </Box>
     </Container>
