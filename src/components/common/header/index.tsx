@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   Box,
   AppBar,
@@ -21,12 +21,17 @@ import { downSmNoneStyle, mainHeader } from "../../../styles/style";
 import BottomNavigationBar from "./BottomNavigationBar";
 import TopNavagationBar from "./TopNavagationBar";
 import { Link } from "react-router-dom";
+import MegaMenu from "./MegaMenu";
+import { handleLeft } from "../../../utils/functions";
 
 
 function Header() {
+
+  const [open, setOpen] = useState<boolean>(false);
+
   return (
-    <Box position="fixed">
-      <AppBar color="default" elevation={1}>
+    <Box position="fixed" zIndex={10}>
+      <AppBar color="default" elevation={1} sx={{zIndex:"-1"}} onMouseLeave={()=> handleLeft(setOpen, true)}>
         <Container maxWidth={"xl"}>
           {/* top bar navagation for mobile device */}
             <TopNavagationBar/>
@@ -82,10 +87,12 @@ function Header() {
 
           {/* Bottom Navagation Section For Desktop device */}
           <Toolbar sx={downSmNoneStyle}>
-            <BottomNavigationBar />
+            <BottomNavigationBar setter={setOpen}/>
           </Toolbar>
           {/* Bottom Navagation Section For Desktop device */}
         </Container>
+       
+          <MegaMenu display={open}/>
       </AppBar>
     </Box>
   );
