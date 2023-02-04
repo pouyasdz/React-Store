@@ -131,3 +131,94 @@ export const menue = [
     ],
   },
 ];
+
+export const slider = [
+  {
+    bgImage:"digital",
+    link:"#"
+  },
+  {
+    bgImage:"discount",
+    link:"#"
+  },
+  {
+    bgImage:"swear",
+    link:"#"
+  },
+]
+
+export const specialSuggestion = [
+  {
+    price:"",
+    cover:"",
+    link:""
+  },
+  {
+    price:"",
+    cover:"",
+    link:""
+  },
+  {
+    price:"",
+    cover:"",
+    link:""
+  },
+  {
+    price:"",
+    cover:"",
+    link:""
+  },
+  {
+    price:"",
+    cover:"",
+    link:""
+  },
+  {
+    price:"",
+    cover:"",
+    link:""
+  },
+  {
+    price:"",
+    cover:"",
+    link:""
+  },
+  {
+    price:"",
+    cover:"",
+    link:""
+  },
+  {
+    price:"",
+    cover:"",
+    link:""
+  },
+  {
+    price:"",
+    cover:"",
+    link:""
+  },
+]
+
+export const categoryOverView = [
+  {
+    name:"موبایل",
+    path:"/mobile",
+    cover:"/images/mbc.jpg",
+  },
+  {
+    name:"کالای دیجیتال",
+    path:"/digital",
+    cover:"/images/categoryDigital.jpg",
+  },
+  {
+    name:"پوشاک",
+    path:"/swear",
+    cover:"/images/categorySwear.jpg",
+  },
+  {
+    name:"سلامت",
+    path:"/life",
+    cover:"/images/categoryLife.jpg",
+  },
+]

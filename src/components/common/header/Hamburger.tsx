@@ -43,7 +43,7 @@ function Hamburger(props: hamburger) {
             <Box display={"grid"} height="8vh" key={index}>
               <Link to={item.path} >
                 <ButtonBase sx={{width:"100%"}}>
-              <Box display={"flex"} width="100%" justifyContent={"space-between"} border={`${theme.palette.secondary.main} 1.5px solid`} padding="5px" borderRadius={"3px"} color={theme.palette.grey[700]}>
+              <Box display={"flex"} width="100%" justifyContent={"space-between"} border={`${theme.palette.grey[400]} 1.5px solid`} padding="5px" borderRadius={"3px"} color={theme.palette.grey[700]}>
 
                 <item.icon />
                 <Typography>{item.name}</Typography>

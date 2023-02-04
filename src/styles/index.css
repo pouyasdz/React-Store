@@ -2,6 +2,7 @@
 body{
     font-family: Vazirmatn, Lalezar;
     text-decoration: none !important;
+    overflow: hidden !important;
 }
 a{
     text-decoration: none !important;
@@ -32,3 +33,4 @@ a{
     background: #555;
     border-radius: 5px;
 }
+

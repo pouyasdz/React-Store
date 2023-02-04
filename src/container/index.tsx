@@ -14,7 +14,7 @@ function Content(props:children) {
     <Container maxWidth={"xl"} dir={"rtl"} sx={{backgroundColor:theme.palette.grey[100], height:"100vh", overflow:"auto"}}>
         <Header/>
         <Box dir={"rtl"} sx={{width:"100%", height:"100vh", 
-        backgroundColor:theme.palette.grey[300],paddingTop:"10rem", 
+        paddingTop:"10rem", 
         [theme.breakpoints.down("sm")]:{paddingTop:"8rem"} ,
         zIndex:"1"
         }} >

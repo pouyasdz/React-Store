@@ -29,14 +29,13 @@ function MegaMenu(props: megaMenu) {
       {menue.map((item, index) => {
         const subLink = `category${item.link}`;
         return (
-          <Paper
-            sx={{
-              width: "23%",
-              padding: "5px",
-              backgroundColor: theme.palette.grey[200],
-            }}
-            elevation={4}
-            key={index}
+          <Box
+          key={index}
+          border={"grey 2px solid"}
+          sx={{
+            width: "23%",
+            padding: "5px",
+          }}
           >
             <Link
               to={`category${item.link}`}
@@ -71,10 +70,11 @@ function MegaMenu(props: megaMenu) {
                       </Typography>
                     </Link>
                   </ListItem>
+
                 );
               })}
             </List>
-          </Paper>
+          </Box>
         );
       })}
     </Box>
