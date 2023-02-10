@@ -1,36 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Vazirmatn&display=swap');
+a{
+    text-decoration: none !important;
+    text-decoration-color: none !important;
+}
 body{
     font-family: Vazirmatn, Lalezar;
     text-decoration: none !important;
     overflow: hidden !important;
 }
-a{
-    text-decoration: none !important;
-    text-decoration-color: none !important;
-}
-:-webkit-scrollbar{
-    width: 10px ;
+
+::-webkit-scrollbar{
+    width: 10px !important;
     
 }
 
 /* Track */
 ::-webkit-scrollbar-track{
-    background: #e0e0e0;
+    background: #e0e0e0 !important;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb{
-    background: #888;
+    background: #888 !important;
 }
 
-::-webkit-scrollbar-thumb:hover{
-    border-radius: 5px;
-    
-}
+
 
 /* Handle on Hover  */
 ::-webkit-scrollbar-track:hover{
-    background: #555;
-    border-radius: 5px;
+    background: #555 !important;
 }
 

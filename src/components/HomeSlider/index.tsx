@@ -33,7 +33,7 @@ function HomeSlider() {
           <SwiperSlide key={index}>
             <Paper
               sx={{ width: "100%", height: "35vh", borderRadius: "0" }}
-              elevation={8}
+              elevation={5}
             >
               <Link to={item.link}>
                 <img
