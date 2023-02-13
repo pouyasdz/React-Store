@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import Service from "../../service/product";
 import { Link } from "react-router-dom";
-// import "../../styles/swiper.css";
+
 
 function SuggestBox() {
   const [state, setState] = useState<[any]>([{}]);
@@ -80,6 +80,7 @@ function SuggestBox() {
           navigation
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
+          centeredSlides={useMediaQuery(theme.breakpoints.up("md")) ? false : true}
           style={{
             width: "100%",
             height: "100%",

@@ -6,13 +6,27 @@ import {
   TabletMacOutlined,
   MemoryOutlined,
   LocalHospitalOutlined,
-  WomanOutlined
+  WomanOutlined,
+  WhatsApp,
+  Telegram,
+  Instagram,
+  PhoneEnabled
 } from "@mui/icons-material";
 
 
 export const brandName = "بلوط";
 
+const brandNameEng = "Balot"
+
 const urlParamID = ":id";
+
+const emailOne = "domain1@gmail.com";
+const emailTow = "domain2@gmail.com";
+const emailThree = "domain2@gmail.com";
+
+const phoneNumberOne = "+98123456789";
+const phoneNumberTow = "+98123456789";
+const phoneNumberThree = "+98123456789";
 
 export const Routing = {
   home: "/",
@@ -222,3 +236,60 @@ export const categoryOverView = [
     cover:"/images/categoryLife.jpg",
   },
 ]
+
+export const contact = {
+  socialMedia:{
+    title:"شبکه های اجتماعی",
+    list:[
+      {
+        name:"whatsapp",
+        link:`https://wa.me/${9800216583}`,
+        icon:WhatsApp,
+      },
+      {
+        name:"telegram",
+        link:`https://t.me/${brandNameEng}`,
+        icon:Telegram,
+      },
+      {
+        name:"instagram",
+        link:`https://www.instagram.com/${brandNameEng}`,
+        icon:Instagram,
+      },
+    ]
+  },
+  emails:{
+    title:"ایمیل ها",
+    list:[
+      {
+        name:emailOne,
+        link:`mailto:${emailOne}`,
+      },
+      {
+        name:emailTow,
+        link:`mailto:${emailTow}`,
+      },
+      {
+        name:emailThree,
+        link:`mailto:${emailThree}`,
+      },
+    ]
+  },
+  phoneNumber:{
+    title:"تلفن تماس",
+    list:[
+      {
+        name:phoneNumberOne,
+        icon:PhoneEnabled,
+      },
+      {
+        name:phoneNumberTow,
+        icon:PhoneEnabled,
+      },
+      {
+        name:phoneNumberThree,
+        icon:PhoneEnabled,
+      },
+    ]
+  }
+}

@@ -32,14 +32,14 @@ function HomeSlider() {
         return (
           <SwiperSlide key={index}>
             <Paper
-              sx={{ width: "100%", height: "35vh", borderRadius: "0" }}
+              sx={{ width: "100%", height: "50vh", borderRadius: "0" }}
               elevation={5}
             >
               <Link to={item.link}>
                 <img
                   src={`/images/${item.bgImage}.jpg`}
                   alt=""
-                  style={{ width: "100%", height: "35vh", objectFit: "cover" }}
+                  style={{ width: "100%", height: "50vh", objectFit: "cover" }}
                 />
               </Link>
             </Paper>
